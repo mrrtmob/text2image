@@ -23,8 +23,14 @@ tesseract.stderr.on("data", (data) => {
   console.log(`${data}`);
 });
 
-const { data, o, font } = argv;
-var cmd = spawn("python3", [__dirname + "/split_training_text.py", data, o, font]);
+const { data, o, font , c } = argv;
+var cmd = spawn("python3", [
+  __dirname + "/split_training_text.py",
+  data,
+  o,
+  font,
+  c,
+]);
 cmd.stdout.on("data", (data) => {
   console.log(`${data}`);
 });

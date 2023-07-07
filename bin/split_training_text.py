@@ -21,7 +21,7 @@ if not os.path.exists(output_directory):
 
 random.shuffle(lines)
 
-count = 100
+count = sys.argv[3]
 
 lines = lines[:count]
 
